@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
@@ -31,6 +33,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.4.2
         with: 
+          token: ${{ secrets.GH_TOKEN }}
           folder: .
           repository-name: madikizavuyo/madikizavuyo.github.io
           git-config-name: Vuyo Madikiza
