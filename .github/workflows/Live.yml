@@ -31,7 +31,7 @@ jobs:
           repository-name: madikizavuyo/madikizavuyo.github.io
           git-config-name: Vuyo Madikiza
           git-config-email: madikizavuyo@gmail.com
-          branch: main
+          branch: test
           commit-message: another commit
           clean: true
           
