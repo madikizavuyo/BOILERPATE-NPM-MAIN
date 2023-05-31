@@ -27,6 +27,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.4.2
         with: 
+          ssh-key: ${{ secrets.DEPLOY }}
           folder: .
           repository-name: madikizavuyo/madikizavuyo.github.io
           git-config-name: Vuyo Madikiza
