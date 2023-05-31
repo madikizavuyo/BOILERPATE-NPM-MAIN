@@ -24,8 +24,8 @@ jobs:
 
       - name: Commit and push changes
         run:
-          git config user.name "Your Name"
-          git config user.email "your@email.com"
+          git config user.name "Vuyo Madikiza"
+          git config user.email "madikizavuyo@gmail.com"
           cd madikizavuyo.github.io/
           git checkout main
           cp -R ../dist/* ./
