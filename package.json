@@ -1,6 +1,6 @@
-{
-	"author": "Vuyo Madikiza",
+{	
 	"name": "fcc-learn-npm-package-json",
+	"author": "Vuyo Madikiza",
 	"dependencies": {
 		"express": "^4.14.0"
 	},
