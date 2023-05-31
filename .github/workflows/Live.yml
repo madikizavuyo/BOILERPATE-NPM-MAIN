@@ -1,4 +1,4 @@
-name: Publish to GitHub Pages
+name: Publish to madikizavuyo.github.io
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    concurrency: ci-${{github.ref}}
 
     steps:
       - name: Checkout repository
@@ -19,13 +20,13 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
-        run: npm ci
+        run: yarn install
 
-      - name: Build
-        run: npm run build # Replace with your build command
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build # Replace with your build output directory
+      - name: Commit and push changes
+        run:
+          cd madikizavuyo.github.io/
+          git config user.name "Vuyo Madikiza"
+          git config user.email "madikizavuyo@gmail.com"
+          git add .
+          git commit -m "Update site"
+          git push origin main
