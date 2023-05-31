@@ -29,3 +29,8 @@ jobs:
         with: 
           folder: .
           repository-name: madikizavuyo/madikizavuyo.github.io
+          git-config-name: Vuyo Madikiza
+          git-config-email: madikizavuyo@gmail.com
+          branch: main
+          commit-message: another commit
+          
