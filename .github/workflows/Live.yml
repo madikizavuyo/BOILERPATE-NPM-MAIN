@@ -24,8 +24,10 @@ jobs:
 
       - name: Commit and push changes
         run:
-          git config user.name "Vuyo Madikiza"
-          git config user.email "madikizavuyo@gmail.com"
-          git remote add origin https://github.com/madikizavuyo/madikizavuyo.github.io.git
+          git config --global user.name "Vuyo Madikiza"
+          git config --global user.email "madikizavuyo@gmail.com"
+          git remote set-url origin https://github.com/madikizavuyo/madikizavuyo.github.io.git
+          git commit -m 'First Commit to cloned repo'          
           git branch -M main
+          git remote add origin https://github.com/madikizavuyo/madikizavuyo.github.io.git
           git push -u origin main
