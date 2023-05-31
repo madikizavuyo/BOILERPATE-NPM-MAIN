@@ -33,6 +33,6 @@ jobs:
           git-config-name: Vuyo Madikiza
           git-config-email: madikizavuyo@gmail.com
           branch: test
-          commit-message: another commit
+          commit-message: another commit 2
           clean: true
           
